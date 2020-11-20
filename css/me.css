@@ -7,7 +7,6 @@
 
 body {
   font-family: "Lora", serif;
-  min-height: 3000px;
 }
 
 ul {
@@ -20,12 +19,10 @@ a {
 /* header */
 .header {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   z-index: 12;
   transition: all 0.4s ease;
-  /* padding: 20px 0 11px; */
-  padding: 13px 0;
-  margin-top: 15px;
+  padding: 20px 0 11px;
 }
 .header .navbar {
   display: flex;
@@ -71,7 +68,6 @@ a {
   text-transform: capitalize;
   font-size: 18px;
   font-weight: 600;
-
   transition: all 0.4s ease;
 }
 .header .navbar .nav li a:hover {
@@ -97,6 +93,7 @@ a {
   display: flex;
   background: url(../images/banner.jpg) no-repeat center/cover;
   height: 100vh;
+  width: 100vw;
 }
 .home-content {
   display: flex;
@@ -628,11 +625,14 @@ a {
   border: 2px solid #ddd;
   resize: vertical;
   height: 100px;
+  padding: 13px 0;
+  text-indent: 10px;
 }
 .contact-right .input input {
   width: 99%;
   padding: 13px 0;
   border: 2px solid #ddd;
+  text-indent: 10px;
 }
 .contact-right .input:first-of-type input {
   width: 48%;
@@ -658,6 +658,11 @@ a {
   color: crimson;
   background: none;
 }
+
+.contact ::placeholder {
+  text-transform: capitalize;
+  font-size: 17px;
+}
 /* footer */
 .footer {
   padding: 16px 0;
@@ -672,7 +677,11 @@ a {
 .footer p span {
   color: crimson;
 }
-@media screen and (max-width: 560px) {
+
+@media screen and (max-width: 500px) {
+  .header {
+    width: 100vw;
+  }
   .header.sticky {
     padding: 10px 0;
   }
@@ -695,7 +704,7 @@ a {
     left: -100%;
     background: black;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     display: block;
     text-align: center;
     transition: all 0.4s ease;
@@ -735,19 +744,25 @@ a {
     border-radius: 6px;
   }
   .home .home-content .content .p-1 {
-    font-size: 20px;
+    font-size: 18px;
   }
   .home .home-content .content .p-2 {
-    font-size: 35px;
+    font-size: 33px;
   }
   .home .home-content .content .p-3 {
-    font-size: 25px;
+    font-size: 23px;
+  }
+  .about .about-content .about-left img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 6px;
   }
   .about {
-    padding: 90px 35px;
+    padding: 80px 35px;
   }
   .about h1 {
-    font-size: 33px;
+    font-size: 27px;
     margin-bottom: 40px;
   }
 
@@ -756,27 +771,28 @@ a {
     margin: 0px;
   }
   .about .about-content .about-right h3 {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .about .about-content .about-right p {
-    font-size: 15px;
+    font-size: 13px;
   }
   .about .about-content .about-right a {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   .about .about-content .about-left {
     flex-basis: 100%;
     margin-bottom: 30px;
+    width: 100vw;
   }
 
   .services {
-    padding: 90px 35px;
+    padding: 80px 35px;
     background-color: #111;
   }
   .services h1 {
-    font-size: 33px;
+    font-size: 27px;
     margin-bottom: 40px;
   }
 
@@ -786,22 +802,22 @@ a {
   }
 
   .services .serv-content .card span {
-    font-size: 30px;
-  }
-  .services .serv-content .card h3 {
     font-size: 25px;
   }
-  /* .services .serv-content .card p {
-    font-size: 18px;
-  } */
+  .services .serv-content .card h3 {
+    font-size: 20px;
+  }
+  .services .serv-content .card p {
+    font-size: 13px;
+  }
 
   .skills {
-    padding: 90px 35px;
+    padding: 80px 35px;
   }
 
   .skills h1 {
     font-size: 33px;
-    margin-bottom: 65px;
+    margin-bottom: 35px;
   }
 
   .skill-content .skill {
@@ -809,17 +825,17 @@ a {
     margin-bottom: 35px;
   }
   .skills .skill-content .skill h3 {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   .skills .skill-content .skill p {
     text-align: left;
-    font-size: 14px;
+    font-size: 13px;
   }
   .skills .skill-content .skill a {
     border: 2px solid crimson;
     color: #fff;
-    font-size: 20px;
+    font-size: 17px;
     text-transform: capitalize;
     padding: 9px 18px;
     font-weight: 500;
@@ -834,11 +850,11 @@ a {
   }
 
   .teams {
-    padding: 90px 35px;
+    padding: 80px 35px;
     background-color: #111;
   }
   .teams h1 {
-    font-size: 33px;
+    font-size: 27px;
     margin-bottom: 40px;
   }
 
@@ -851,13 +867,13 @@ a {
     font-size: 30px;
   }
   .teams .team-content .team h3 {
-    font-size: 25px;
+    font-size: 20px;
   }
   .contact {
-    padding: 90px 35px;
+    padding: 80px 35px;
   }
   .contact h1 {
-    font-size: 33px;
+    font-size: 27px;
     margin-bottom: 40px;
   }
 
@@ -867,7 +883,7 @@ a {
   }
 
   .fst h3 {
-    font-size: 20px;
+    font-size: 17px;
   }
   .fst p {
     font-size: 15px;
@@ -885,7 +901,7 @@ a {
   }
 
   .contact-right h3 {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .contact-right .input textarea {
@@ -905,7 +921,7 @@ a {
   .contact-right a {
     border: 2px solid crimson;
     color: #fff;
-    font-size: 20px;
+    font-size: 18px;
     text-transform: capitalize;
     padding: 9px 18px;
     font-weight: 500;
@@ -919,11 +935,14 @@ a {
     color: crimson;
     background: none;
   }
+  .contact ::placeholder {
+    font-size: 15px;
+  }
   /* footer */
 
   .footer p {
     text-align: center;
-    font-size: 13px;
+    font-size: 11px;
     text-transform: capitalize;
     color: #fff;
   }
